@@ -14,24 +14,24 @@ select_dir.addEventListener("input", () => {
   } else {
     switch (value) {
       case "90":
-        dir_number.textContent = "to top";
-        myFunction_set(`to top`, "--dir");
+        dir_number.textContent = "to right";
+        myFunction_set(`to right`, "--dir");
         break;
       case "180":
-        dir_number.textContent = "to left";
-        myFunction_set(`to left`, "--dir");
-        break;
-      case "270":
         dir_number.textContent = "to bottom";
         myFunction_set(`to bottom`, "--dir");
         break;
+      case "270":
+        dir_number.textContent = "to left";
+        myFunction_set(`to left`, "--dir");
+        break;
       case "360":
-        dir_number.textContent = "to right";
-        myFunction_set(`to right`, "--dir");
+        dir_number.textContent = "to top";
+        myFunction_set(`to top`, "--dir");
         break;
       case "0":
-        dir_number.textContent = "to right";
-        myFunction_set(`to right`, "--dir");
+        dir_number.textContent = "to top";
+        myFunction_set(`to top`, "--dir");
         break;
       default:
         dir_number.textContent = `${value}deg`;
