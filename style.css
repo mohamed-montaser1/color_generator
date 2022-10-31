@@ -1,10 +1,24 @@
 :root {
   --f-color: black;
   --s-color: black;
+  --dir: to right;
 }
 
 body {
   text-align: center;
   color: white;
-  background-image: linear-gradient(to right, var(--f-color), var(--s-color));
+  background-image: linear-gradient(var(--dir), var(--f-color), var(--s-color));
+  height: 100vh;
+  overflow: hidden;
+}
+
+.select-dir {
+  width: 300px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
 }
