@@ -1,0 +1,10 @@
+:root {
+  --f-color: black;
+  --s-color: black;
+}
+
+body {
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(to right, var(--f-color), var(--s-color));
+}
