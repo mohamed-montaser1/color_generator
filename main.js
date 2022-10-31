@@ -12,15 +12,46 @@ select_dir.addEventListener("input", () => {
     myFunction_set(`0deg`, "--dir");
     value = 0;
   } else {
-    if (value == "90") {
-      dir_number.textContent = "to right";
-      myFunction_set(`to right`, "--dir");
-    } else {
-      dir_number.textContent = `${value}deg`;
-      myFunction_set(`${value}deg`, "--dir");
+    switch (value) {
+      case "90":
+        dir_number.textContent = "to right";
+        myFunction_set(`to right`, "--dir");
+        break;
+      case "180":
+        dir_number.textContent = "to bottom";
+        myFunction_set(`to bottom`, "--dir");
+        break;
+      case "270":
+        dir_number.textContent = "to left";
+        myFunction_set(`to left`, "--dir");
+        break;
+      case "360":
+        dir_number.textContent = "to top";
+        myFunction_set(`to top`, "--dir");
+        break;
+      case "0":
+        dir_number.textContent = "to top";
+        myFunction_set(`to top`, "--dir");
+        break;
+      default:
+        dir_number.textContent = `${value}deg`;
+        myFunction_set(`${value}deg`, "--dir");
     }
+
+    // if (value == "90") {
+    //   dir_number.textContent = "to right";
+    //   myFunction_set(`to right`, "--dir");
+    // } else if (value == "180") {
+    //   dir_number.textContent = "to bottom";
+    //   myFunction_set(`to bottom`, "--dir");
+    // } else if (value == "360") {
+    //   dir_number.textContent = "to top";
+    //   myFunction_set(`to top`, "--dir");
+    // } else {
+    // dir_number.textContent = `${value}deg`;
+    // myFunction_set(`${value}deg`, "--dir");
+    // }
   }
-  console.log(value);
 });
 
 input_one.oninput = (e) => {
